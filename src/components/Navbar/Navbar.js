@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Button from "../Button/Button";
 import { ButtonSell } from "./../Button/ButtonSell";
 
 const Navbar = () => {
   const [offset, setOffset] = useState(false);
+
+  useEffect(() => {
+    if (offset) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [offset]);
 
   return (
     <Container>

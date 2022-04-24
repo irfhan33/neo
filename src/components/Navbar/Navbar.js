@@ -27,7 +27,7 @@ const Navbar = () => {
 
       {/* Offset Sidebar */}
 
-      <OffsetSidebar offset={offset}>
+      <OffsetSidebar offset={offset ? 1 : 0}>
         <ButtonSidebar>Login</ButtonSidebar>
         <ButtonSidebarPrimary>Sign Up</ButtonSidebarPrimary>
         <CloseButton src="/icon/close.svg" onClick={() => setOffset(false)} />

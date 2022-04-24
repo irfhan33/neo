@@ -8,10 +8,12 @@ const HeroSection = () => {
     <>
       <Container>
         {/* Carousel Desktop Hidden in Tablet */}
-        <CarouselItem background="/background/bg-1.jpg" />
-        <CarouselItem background="/background/bg-2.jpg" />
-        <CarouselItem background="/background/bg-3.jpg" />
-        <CarouselItem background="/background/bg-4.jpg" />
+        <CarouselDesktopWrapper>
+          <CarouselItem background="/background/bg-1.jpg" />
+          <CarouselItem background="/background/bg-2.jpg" />
+          <CarouselItem background="/background/bg-3.jpg" />
+          <CarouselItem background="/background/bg-4.jpg" />
+        </CarouselDesktopWrapper>
 
         {/* Carousel Mobile, Hidden in Desktop */}
         <CarouselMobileWrapper>
@@ -42,23 +44,34 @@ const HeroSection = () => {
 export default HeroSection;
 
 const Container = styled.div`
-  height: 835px;
-  display: flex;
   position: relative;
-  /* animation: slide 20s infinite; */
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 768px) {
     height: auto;
     background: #f6ea5e;
+    animation: none;
     flex-direction: column-reverse;
+  }
+`;
+
+const CarouselDesktopWrapper = styled.div`
+  height: 835px;
+  position: relative;
+  display: flex;
+  animation: slide 20s infinite;
+
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
 const TextWrapper = styled.div`
   position: absolute;
   padding: 0 170px;
-  margin-top: 14vw;
   width: 100%;
+  top: 14vw;
 
   @media (max-width: 768px) {
     position: relative;
@@ -130,6 +143,6 @@ const ButtonSearch = styled.div`
 `;
 
 const CarouselMobileWrapper = styled.div`
-  /* animation: slide 20s infinite; */
+  animation: slide 20s infinite;
   display: flex;
 `;

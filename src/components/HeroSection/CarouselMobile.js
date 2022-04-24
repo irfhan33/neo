@@ -22,6 +22,7 @@ const Container = styled.div`
 
   @media (max-width: 768px) {
     display: flex;
+    margin-top: 50px;
   }
 
   img {

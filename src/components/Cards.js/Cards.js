@@ -41,6 +41,7 @@ const Container = styled.div`
 
   @media (max-width: 585px) {
     margin-top: -24%;
+    grid-gap: 24px;
   }
 
   @media (max-width: 400px) {

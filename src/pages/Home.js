@@ -19,4 +19,6 @@ export default Home;
 const Container = styled.div`
   min-height: 100vh;
   overflow-x: hidden;
+  max-width: 100vw;
+  position: relative;
 `;

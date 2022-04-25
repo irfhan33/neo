@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Button from "../Button/Button";
 import { ButtonSell } from "./../Button/ButtonSell";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
 const Navbar = () => {
   const [offset, setOffset] = useState(false);
@@ -20,12 +21,12 @@ const Navbar = () => {
       <RightSection>
         <Button>Log in</Button>
         <Button primary>Sign Up</Button>
-        <img src="/icon/cart.svg" alt="cart icon" />
+        <ShoppingCartOutlinedIcon className="cart-icon" />
       </RightSection>
 
       {/* Mobile Right Section */}
       <RightSectionMobile>
-        <img src="/icon/cart.svg" alt="cart icon" />
+        <ShoppingCartOutlinedIcon className="cart-icon" />
         <img
           src="/icon/menu.svg"
           alt="menu icon"
@@ -59,8 +60,9 @@ const Container = styled.div`
 const RightSection = styled.div`
   margin-left: auto;
   display: flex;
+  align-items: center;
 
-  img {
+  .cart-icon {
     margin-left: 33px;
     cursor: pointer;
   }
@@ -74,7 +76,9 @@ const RightSectionMobile = styled.div`
   margin-left: auto;
   gap: 14px;
   display: none;
-  img {
+  align-items: center;
+
+  .cart-icon {
     cursor: pointer;
   }
 
@@ -90,7 +94,7 @@ const OffsetSidebar = styled.div`
   bottom: 0;
   right: 0;
   left: ${({ offset }) => (offset ? "0px" : "100%")};
-  z-index: 99;
+  z-index: 9999;
   display: none;
   flex-direction: column;
   padding: 0 24px;
@@ -103,14 +107,30 @@ const OffsetSidebar = styled.div`
 
 const ButtonSidebar = styled.div`
   color: white;
-  border: 3px solid white;
-  border-radius: 12px;
-  height: 60px;
+  border: 2px solid white;
+  font-weight: 600;
+  padding: 0.25rem 12px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  line-height: 1.5;
+  font-size: 14px;
   margin-top: 130px;
+  text-decoration: none;
+  user-select: none;
+
+  &:hover {
+    background-color: #4d4d4d;
+    color: white;
+  }
+
+  &:active {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 50%);
+  }
 `;
 
 const ButtonSidebarPrimary = styled(ButtonSidebar)`

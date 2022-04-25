@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const CarouselMobile = ({ background }) => {
+const CarouselMobile = ({ background, className }) => {
   return (
-    <Container>
+    <Container className={className}>
       <img src={background} alt={background} draggable={false} />
     </Container>
   );
@@ -15,7 +15,7 @@ const Container = styled.div`
   height: 100%;
   width: 100%;
   min-width: 100%;
-  position: relative;
+  position: absolute;
   overflow: hidden;
   background: #f6ea5e;
   display: none;

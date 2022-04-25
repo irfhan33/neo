@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Button from "../Button/Button";
 import { ButtonSell } from "./../Button/ButtonSell";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [offset, setOffset] = useState(false);
@@ -17,10 +18,20 @@ const Navbar = () => {
 
   return (
     <Container>
-      <ButtonSell>Sell it!</ButtonSell>
+      <Link to="/login" style={{ textDecoration: "none" }}>
+        <ButtonSell>Sell it!</ButtonSell>
+      </Link>
+
       <RightSection>
-        <Button>Log in</Button>
-        <Button primary>Sign Up</Button>
+        <Link to="/login" style={{ textDecoration: "none" }}>
+          <Button>Log in</Button>
+        </Link>
+        <Link
+          to="/signup"
+          style={{ textDecoration: "none", marginLeft: "12px" }}
+        >
+          <Button primary>Sign Up</Button>
+        </Link>
         <ShoppingCartOutlinedIcon className="cart-icon" />
       </RightSection>
 
@@ -37,8 +48,13 @@ const Navbar = () => {
       {/* Offset Sidebar */}
 
       <OffsetSidebar offset={offset ? 1 : 0}>
-        <ButtonSidebar>Login</ButtonSidebar>
-        <ButtonSidebarPrimary>Sign Up</ButtonSidebarPrimary>
+        <Link to="/login" style={{ textDecoration: "none" }}>
+          <ButtonSidebar>Login</ButtonSidebar>
+        </Link>
+
+        <Link to="/signup" style={{ textDecoration: "none" }}>
+          <ButtonSidebarPrimary>Sign Up</ButtonSidebarPrimary>
+        </Link>
         <CloseButton src="/icon/close.svg" onClick={() => setOffset(false)} />
       </OffsetSidebar>
     </Container>

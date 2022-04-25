@@ -23,10 +23,6 @@ const Container = styled.div`
   background: ${({ primary }) => (primary ? "#2E2E2E" : "white")};
   color: ${({ primary }) => (!primary ? "#2E2E2E" : "white")};
 
-  &:nth-child(2) {
-    margin-left: 12px;
-  }
-
   &:hover {
     background-color: #4d4d4d;
     border-color: #2e2e2e;

@@ -73,6 +73,7 @@ const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  background: blue;
 
   @media (max-width: 768px) {
     height: auto;
@@ -107,16 +108,15 @@ const CarouselDesktopWrapper = styled.div`
 
 const TextWrapper = styled.div`
   position: absolute;
-  padding: 0 170px;
   width: 100%;
   top: 7vw;
   z-index: 999;
+  max-width: 1200px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 20px;
   @media (max-width: 768px) {
     position: relative;
-  }
-
-  @media (max-width: 768px) {
-    padding: 0 20px;
   }
 
   h1 {

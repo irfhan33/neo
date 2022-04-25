@@ -49,12 +49,12 @@ export default Navbar;
 
 const Container = styled.div`
   background: white;
-  padding: 20px 170px;
+  padding: 18px 0;
   display: flex;
   align-items: center;
-  @media (max-width: 768px) {
-    padding: 20px 23px;
-  }
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto;
 `;
 
 const RightSection = styled.div`
@@ -143,6 +143,6 @@ const CloseButton = styled.img`
   width: 20px;
   height: 20px;
   position: absolute;
-  right: 24px;
+  right: 20px;
   top: 24px;
 `;

@@ -25,7 +25,6 @@ const Cards = () => {
 export default Cards;
 
 const Container = styled.div`
-  padding: 0 170px;
   display: grid;
   grid-template-columns: repeat(3, minmax(auto, 1fr));
   grid-gap: 30px;
@@ -33,6 +32,11 @@ const Container = styled.div`
   position: relative;
   padding-bottom: 37px;
   margin-top: -5%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 
   @media (max-width: 768px) {
     padding: 20px 20px;

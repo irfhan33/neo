@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { BackNavigation } from "./../components/BackNavigation/BackNavigation";
 import BoxWrapper, {
@@ -8,6 +8,10 @@ import BoxWrapper, {
 import Input from "./../components/Input/Input";
 import { Helmet } from "react-helmet";
 const SignUp = () => {
+  useEffect(() => {
+    document.body.style.overflow = "unset";
+  }, []);
+
   return (
     <Container>
       <Helmet>
@@ -45,7 +49,7 @@ const Container = styled.div`
   background: #fef8b0;
   min-height: 100vh;
   padding: 0 20px;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
 `;
 
 const ButtonLogin = styled.div`

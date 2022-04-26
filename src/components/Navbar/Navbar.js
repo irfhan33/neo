@@ -57,7 +57,11 @@ const Navbar = () => {
           <ButtonSidebar>Login</ButtonSidebar>
         </Link>
 
-        <Link to="/signup" style={{ textDecoration: "none" }}>
+        <Link
+          to="/signup"
+          style={{ textDecoration: "none" }}
+          onClick={() => setOffset(false)}
+        >
           <ButtonSidebarPrimary>Sign Up</ButtonSidebarPrimary>
         </Link>
         <CloseButton src="/icon/close.svg" onClick={() => setOffset(false)} />
@@ -113,7 +117,7 @@ const RightSectionMobile = styled.div`
 `;
 
 const OffsetSidebar = styled.div`
-  position: absolute;
+  position: fixed;
   background: #2e2e2e;
   top: 0;
   bottom: 0;

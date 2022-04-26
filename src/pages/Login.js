@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Helmet from "react-helmet";
 import styled from "styled-components";
 import { BackNavigation } from "./../components/BackNavigation/BackNavigation";
@@ -8,6 +8,10 @@ import BoxWrapper, {
 } from "./../components/BoxWrapper/BoxWrapper";
 import Input from "./../components/Input/Input";
 const Login = () => {
+  useEffect(() => {
+    document.body.style.overflow = "unset";
+  }, []);
+
   return (
     <Container>
       <Helmet>
@@ -37,9 +41,8 @@ export default Login;
 
 const Container = styled.div`
   background: #fef8b0;
-  min-height: 100vh;
   padding: 0 20px;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
 `;
 
 const RememberMe = styled.div`

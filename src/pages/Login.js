@@ -39,7 +39,7 @@ const Container = styled.div`
   background: #fef8b0;
   min-height: 100vh;
   padding: 0 20px;
-  padding-bottom: 30px;
+  padding-bottom: 100px;
 `;
 
 const RememberMe = styled.div`

@@ -48,7 +48,12 @@ const Navbar = () => {
       {/* Offset Sidebar */}
 
       <OffsetSidebar offset={offset ? 1 : 0}>
-        <Link to="/login" style={{ textDecoration: "none" }}>
+        <Link
+          to="/login"
+          style={{
+            textDecoration: "none",
+          }}
+        >
           <ButtonSidebar>Login</ButtonSidebar>
         </Link>
 
@@ -98,6 +103,10 @@ const RightSectionMobile = styled.div`
     cursor: pointer;
   }
 
+  img {
+    cursor: pointer;
+  }
+
   @media (max-width: 768px) {
     display: flex;
   }
@@ -117,7 +126,7 @@ const OffsetSidebar = styled.div`
   min-width: 100vw;
   transition: all 250ms;
   @media (max-width: 768px) {
-    display: flex;
+    display: block;
   }
 `;
 
@@ -135,7 +144,6 @@ const ButtonSidebar = styled.div`
   margin-top: 130px;
   text-decoration: none;
   user-select: none;
-
   &:hover {
     background-color: #4d4d4d;
     color: white;
@@ -161,4 +169,5 @@ const CloseButton = styled.img`
   position: absolute;
   right: 20px;
   top: 24px;
+  cursor: pointer;
 `;

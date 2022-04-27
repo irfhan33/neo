@@ -18,7 +18,7 @@ const SecondLandingPage = () => {
             <ButtonsHero left />
           </LeftSection>
           <RightSection>
-            <img src="/background/hero.svg" alt="hero image" />
+            <image src="/background/hero.svg" alt="hero image" />
           </RightSection>
         </Box>
       </Wrapper>

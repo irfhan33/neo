@@ -1,4 +1,3 @@
-import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import CarouselItem from "./CarouselItem";
 import CarouselMobile from "./CarouselMobile";
@@ -140,7 +139,7 @@ const TextWrapper = styled.div`
   }
 `;
 
-const SearchWrapper = styled.div`
+export const SearchWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-top: 33px;
@@ -180,7 +179,7 @@ const SearchWrapper = styled.div`
   }
 `;
 
-const ButtonSearch = styled.div`
+export const ButtonSearch = styled.div`
   background: #2e2e2e;
   height: 100%;
   display: flex;

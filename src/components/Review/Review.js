@@ -41,9 +41,35 @@ const Review = () => {
     {
       name: "Irfan",
       joined: "2022",
-      reviews: "99",
+      reviews: "13",
       testimoni: "Late Delivery",
       rating: "2",
+      date: "a month ago",
+    },
+    {
+      name: "Budi",
+      joined: "2021",
+      reviews: "17",
+      testimoni:
+        "barangnya bagus nih, langsung plug n play. tanpa perlu install konfigurasi. rekomended bgt buat yg gamau ribet ngegame di pc. btw disini gue coba test buat game FIFA22, itu langsung konek ke gamenya jd langsung bisa play pake stick",
+      rating: "4",
+      date: "a month ago",
+    },
+    {
+      name: "Susanto",
+      joined: "2022",
+      reviews: "22",
+      testimoni:
+        "barangnya sudah datang dan saya main elden ring pakai stick gaming yang suka bergetar",
+      rating: "5",
+      date: "a month ago",
+    },
+    {
+      name: "Verdy",
+      joined: "2029",
+      reviews: "43",
+      testimoni: "Mantabss 👍🏻👍🏻👍🏻👍🏻👍🏻",
+      rating: "5",
       date: "a month ago",
     },
   ];

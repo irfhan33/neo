@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const ButtonsHero = ({ left }) => {
   return (
     <Buttons left={left}>
-      <ButtonPrimary>Start Selling</ButtonPrimary>
-      <ButtonSecondary>Your Products</ButtonSecondary>
+      <ButtonPrimary to="/product">Start Selling</ButtonPrimary>
+      <ButtonSecondary to="/product">Your Products</ButtonSecondary>
     </Buttons>
   );
 };
@@ -24,7 +25,7 @@ const Buttons = styled.div`
   }
 `;
 
-const ButtonPrimary = styled.div`
+const ButtonPrimary = styled(Link)`
   display: flex;
   flex-grow: 1;
   max-width: 200px;

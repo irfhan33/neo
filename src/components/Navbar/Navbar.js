@@ -148,6 +148,7 @@ const ButtonSidebar = styled.div`
   margin-top: 130px;
   text-decoration: none;
   user-select: none;
+
   &:hover {
     background-color: #4d4d4d;
     color: white;

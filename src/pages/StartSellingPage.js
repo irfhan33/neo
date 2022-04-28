@@ -1,11 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import LandingNavbar from "./../components/Navbar/LandingNavbar";
-import ButtonsHero from "./../components/ButtonsHero/ButtonsHero";
+import LandingNavbar from "../components/Navbar/LandingNavbar";
+import ButtonsHero from "../components/ButtonsHero/ButtonsHero";
+import Helmet from "react-helmet";
 
-const LandingPage = () => {
+const StartSellingPage = () => {
   return (
     <Container>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Start Selling</title>
+      </Helmet>
       <LandingNavbar />
       <Wrapper>
         <ButtonsHero />
@@ -17,7 +22,7 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default StartSellingPage;
 
 const Container = styled.div`
   min-height: 100vh;

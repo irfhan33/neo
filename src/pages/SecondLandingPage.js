@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import ButtonsHero from "../components/ButtonsHero/ButtonsHero";
 import LandingNavbar from "./../components/Navbar/LandingNavbar";
-import { Title } from "./LandingPage";
+import { Title } from "./StartSellingPage";
 
 const SecondLandingPage = () => {
   return (

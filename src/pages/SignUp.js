@@ -7,6 +7,7 @@ import BoxWrapper, {
 } from "./../components/BoxWrapper/BoxWrapper";
 import Input from "./../components/Input/Input";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 const SignUp = () => {
   useEffect(() => {
     document.body.style.overflow = "unset";
@@ -34,9 +35,12 @@ const SignUp = () => {
         <Input placeholder="Province" />
         <Input placeholder="Phone Number" />
 
-        <ButtonLogin>Sign Up</ButtonLogin>
+        <ButtonLogin to="/start-selling">Sign Up</ButtonLogin>
         <BoxWrapperFooter>
-          Already have account? <span>Login</span>
+          Already have account?{" "}
+          <Link to="/login" style={{ textDecoration: "none" }}>
+            <span>Login</span>
+          </Link>
         </BoxWrapperFooter>
       </BoxWrapper>
     </Container>
@@ -52,7 +56,7 @@ const Container = styled.div`
   padding-bottom: 30px;
 `;
 
-const ButtonLogin = styled.div`
+const ButtonLogin = styled(Link)`
   border-radius: 10px;
   max-width: 600px;
   width: 100%;

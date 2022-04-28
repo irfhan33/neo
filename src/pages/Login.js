@@ -7,6 +7,8 @@ import BoxWrapper, {
   BoxWrapperTitle,
 } from "./../components/BoxWrapper/BoxWrapper";
 import Input from "./../components/Input/Input";
+import { Link } from "react-router-dom";
+
 const Login = () => {
   useEffect(() => {
     document.body.style.overflow = "unset";
@@ -27,10 +29,15 @@ const Login = () => {
           <input type="checkbox" id="rememberMe" />
           <label htmlFor="rememberMe">Remember password</label>
         </RememberMe>
-        <ButtonLogin>Login</ButtonLogin>
-        <ButtonLoginSecondary>Login using phone number</ButtonLoginSecondary>
+        <ButtonLogin to="/start-selling">Login</ButtonLogin>
+        <ButtonLoginSecondary to="/start-selling">
+          Login using phone number
+        </ButtonLoginSecondary>
         <BoxWrapperFooter>
-          Dont't have account? <span>Sign Up</span>
+          Dont't have account?
+          <Link to="/signup" style={{ textDecoration: "none" }}>
+            <span>Sign Up</span>
+          </Link>
         </BoxWrapperFooter>
       </BoxWrapper>
     </Container>
@@ -61,7 +68,7 @@ const RememberMe = styled.div`
   }
 `;
 
-const ButtonLogin = styled.div`
+const ButtonLogin = styled(Link)`
   border-radius: 10px;
   max-width: 600px;
   width: 100%;
@@ -89,6 +96,7 @@ const ButtonLogin = styled.div`
     box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 50%);
   }
 `;
+
 const ButtonLoginSecondary = styled(ButtonLogin)`
   background: white;
   color: #2e2e2e;

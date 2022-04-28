@@ -1,15 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import ShopNavbar from "./../components/Navbar/ShopNavbar";
-import Carousel from "./../components/Carousel/Carousel";
+import ShopNavbar from "../components/Navbar/ShopNavbar";
+import Carousel from "../components/Carousel/Carousel";
 import Description from "../components/Description/Description";
-import Title from "./../components/Title/Title";
+import Title from "../components/Title/Title";
 import Review from "../components/Review/Review";
 import Footer from "../components/Footer/Footer";
+import Helmet from "react-helmet";
 
-const Shop = () => {
+const Product = () => {
   return (
     <Container>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Product</title>
+      </Helmet>
       <ShopNavbar />
       <Content>
         <Carousel />
@@ -22,7 +27,7 @@ const Shop = () => {
   );
 };
 
-export default Shop;
+export default Product;
 
 const Container = styled.div``;
 const Content = styled.div`

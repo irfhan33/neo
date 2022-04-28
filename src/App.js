@@ -2,9 +2,8 @@ import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-import LandingPage from "./pages/LandingPage";
-import SecondLandingPage from "./pages/SecondLandingPage";
-import Shop from "./pages/Shop";
+import StartSellingPage from "./pages/StartSellingPage";
+import Product from "./pages/Product";
 function App() {
   return (
     <div>
@@ -13,9 +12,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/landing" element={<LandingPage />} />
-          <Route path="/landing-second" element={<SecondLandingPage />} />
-          <Route path="/shop" element={<Shop />} />
+          <Route path="/start-selling" element={<StartSellingPage />} />
+          {/* <Route path="/landing-second" element={<SecondLandingPage />} /> */}
+          <Route path="/product" element={<Product />} />
         </Routes>
       </BrowserRouter>
     </div>
